@@ -1,7 +1,7 @@
 
 # Repo structure 
 This is mono repo that holds different project, the following will help in quickly grasping where is what
-- Assets:  Assets for readme
+
 - Aurora: A monorepo for all frontend projects.
 - Bouncer: A python project for user management 
 - Foundation:  Pulumi code that holds the infrastructure in place.
