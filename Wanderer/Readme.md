@@ -29,13 +29,22 @@ The scoring mechanisms is not planned to be decoupled as the scope of different 
 ## Capacity Planning
 
 # System Design Wanderer
+### Overview
 One of the key aspect when reading and processing
 file is that some of the file do range at different size and different format. Some good examples could highly textual books
-such as biographies, programming languages books, novels etc and some of the books can highly illustration driven such as graphic
+such as biographies, programming languages books, novels, etc. and some of the books can be highly illustration driven such as graphic
 novel, brochure etc. To ensure that system is able to accept file of different size and to ensure to have ability to add
-more format in the future. Wanderer is the data processing pipeline project part of the Z project.  The project will take advantage of apache beam
-which is open source data processing pipeline design for parallel compute. Dataflow will be used as part of the runner to
-take advantage of the cloud offering of Google.
+more format in the future, a data pipeline processing will be developed instead of a microservice. This will ensure that the pipeline 
+can be scaled for different needs in terms of file sizes and file formats. `Wanderer` is the data processing pipeline project
+part of the Z project.  The project will take advantage of apache beam which is open source data processing pipeline design 
+for parallel compute. Dataflow will be used as part of the runner to take advantage of the cloud offering of Google.
+
+### Solution 
+Two separated pipeline will be developed, where one pipeline `Reader` will be used to read the book from a given url to plain text page wise
+and another pipeline `Processor` will be used to collect the text and score it and store the information into the sinks. This will provide two main
+advantages 
+1. Read capabilities and processing capabilities can be scaled and managed differently
+2. Processing input will always be a text, as long the input remains the same the system can be used for other revenue steams in the future such as paragraph processing 
 
 - A cloud function will read the file in bucket and prepare a signed storage url
 - The pre-generated urls will be pushed to pubsub topic
