@@ -29,6 +29,10 @@ and the following problem is described.
 `Imagined` being the keyword across all assumptions
 
 
-
+Please read the docs in the following order to better understand the flow
+1. [Company](Docs/company.md)
+2. [Product](Docs/product.md)
+3. [Software](Docs/software.md)
+4. [Wanderer](Wanderer/Readme.md)
 
 
