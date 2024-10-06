@@ -4,6 +4,6 @@ import java.io.InputStream;
 
 public interface FileDao {
 
-
     InputStream processFile(String filePath);
+
 }

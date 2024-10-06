@@ -42,6 +42,9 @@ and convert to required message.
 
 A `BookConfig` class will be developed to maintain the object creation of the book package.
 
+The rest of the features also follow a similar design, but have different interfaces.
+
+
 ### FireStore Source Design
 
 ### FireStore Sink Design

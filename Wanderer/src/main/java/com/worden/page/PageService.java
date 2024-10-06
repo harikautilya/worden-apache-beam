@@ -12,6 +12,12 @@ public class PageService {
     }
 
     Page extractWords(Page page) {
-        return page;
+        Page newPageObj = pageDao.getWords(page);
+        return newPageObj;
+    }
+
+
+    int getScore(Page page) {
+        return -1;
     }
 }
