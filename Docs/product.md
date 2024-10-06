@@ -32,12 +32,13 @@ Faster book processing
 
 ### Book management
 
-1. User should be able to upload a book
-2. User should be able to delete a book and remove from processing
-3. User should be able to see the book information such as number of pages and word count for each page
-4. User can deactivate a book for reading api
-5. User can activate a book for reading api
-6. User should be able to see a book is processed or not
+1. User should be able to upload a book from local file
+2. User should be able to upload a book from url
+3. User should be able to delete a book and remove from processing
+4. User should be able to see the book information such as number of pages and word count for each page
+5. User can deactivate a book for reading api
+6. User can activate a book for reading api
+7. User should be able to see a book is processed or not
 
 #### Wireframe
 ![img_3.png](Assets/img_3.png)

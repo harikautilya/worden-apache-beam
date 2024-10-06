@@ -36,3 +36,13 @@ Please read the docs in the following order to better understand the flow
 4. [Wanderer](Wanderer/Readme.md)
 
 
+# Note 
+There are some un-necessary steps i have taken to ensure i learn some additional feature of technologies. In a real world
+I would reverse this decisions to ensure there is optimal design.
+
+Here is the list
+1. There is no specific need for `Processor` to be batch processing , making this streaming would make the feature more realtime
+but i have taken it as batch to learn how pipeline options, etc. can change in terms batch design. Mostly I will make it streaming
+in the upcoming workdays.
+
+
