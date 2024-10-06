@@ -200,6 +200,7 @@ Steps:
 ## Resources
 - https://firebase.google.com/docs/firestore
 - https://cloud.google.com/pubsub/docs/stream-messages-dataflow
+- https://cloud.google.com/dataflow/docs/guides/manage-dependencies#java
 
 
 ---------------------

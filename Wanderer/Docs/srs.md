@@ -15,6 +15,7 @@ The scoring mechanisms is not planned to be decoupled as the scope of different 
 - All the books are expected to be in english
 
 ## Non-Functional
+- To facilitate the functionalities, a new java project `Wanderer` will be developed
 - Able to understand the time taken to process each book
 - The book is expected to be processed in less than half an hour (< 30 mins)
 - The expected load is based on the revenue goal

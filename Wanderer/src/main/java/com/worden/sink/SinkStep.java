@@ -1,9 +1,10 @@
 package com.worden.sink;
 
 import org.apache.beam.sdk.values.PCollection;
+import org.apache.beam.sdk.values.PDone;
 
 public interface SinkStep<T> {
 
-    boolean populateData(PCollection<T> data);
+    PDone populateData(T data);
 
 }
