@@ -24,12 +24,23 @@ Addressing the aspect of pipeline two abstract classes will be designed which ac
 ending step of pipeline respectively named as SourceTransform and SinkTransform. 
 
 ![img.png](assets/img_3.png)
+
 Fig : SourceTransform
 
 ![img.png](assets/img_4.png)
+
 Fig : SinkTransform
 
-### Storage Source Design
+### Book 
+A `BookService` class will be introduced that holds the funalities of reading book information from source and storing 
+book information to sink. `BookDao` will be injected into `BookService` which collect books message from pub sub via `fetchBooks`.
+The dao interface ensure that the implemented is abstracted and the service is not directly dependent on the underlying
+implementation.
+
+A `PubSubBookDao` will be developed that implements `BookDao`, providing the functionality on how to read pubsub message
+and convert to required message.
+
+A `BookConfig` class will be developed to maintain the object creation of the book package.
 
 ### FireStore Source Design
 
