@@ -6,6 +6,7 @@ import org.checkerframework.checker.initialization.qual.Initialized;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.checkerframework.checker.nullness.qual.UnknownKeyFor;
 
+import com.worden.core.file.FileService;
 import com.worden.core.file.impl.WebFileDao;
 
 public class FileConfig {

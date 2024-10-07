@@ -1,4 +1,4 @@
-package com.worden.sink;
+package com.worden.wanderer.sink;
 
 import org.apache.beam.sdk.transforms.PTransform;
 import org.apache.beam.sdk.values.PCollection;
