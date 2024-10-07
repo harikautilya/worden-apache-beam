@@ -1,0 +1,20 @@
+{
+  "name": "Wanderer",
+  "dockerComposeFile": [
+    "../../docker-compose.yml"
+  ],
+  "service": "wanderer-devbox",
+  "workspaceFolder": "/workspace/wanderer",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "java.home": "/opt/java/openjdk",
+        "java.jdt.ls.java.home": "/opt/java/openjdk"
+      },
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "Oracle.oracle-java"
+      ]
+    }
+  }
+}

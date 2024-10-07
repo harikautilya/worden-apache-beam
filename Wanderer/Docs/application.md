@@ -2,6 +2,7 @@
 `Wanderer` is a java project that holds pipeline definitions for the `Wanderer` project. This project will be developed 
 using the beam sdk java and dataflow libs as provided in the SRS resources.
 ## Design
+
 The pipelines `Reader` and `Processor` together essentially hold the ability to convert a given book in url from to 
 extract text and score each page. The application code will be developed to ensure that the packaging is cohesive and 
 robust for implementation. Keeping this as the main functionality the following functions are identified
@@ -42,19 +43,34 @@ and convert to required message.
 
 A `BookConfig` class will be developed to maintain the object creation of the book package.
 
-The rest of the features also follow a similar design, but have different interfaces.
+The rest of the features also follow a similar design, but have different interfaces.Highlighting the interfaces here to understand the contracts.
 
+![Image for Extraction](assets/img_5.png)
 
-### FireStore Source Design
+Fig : ExtractionDao
 
-### FireStore Sink Design
+![Image for File](assets/img_6.png)
 
-### Pubsub Source Design
+Fig : FileDao
 
-### Pubsub Sink Design
+![Image for Page](assets/img_7.png)
+
+Fig : PageProcessingDao
+
+Score will added to `PageService` as there is no scope of expanding scoring. If when scoreing has to be expand, it is ideally recommeding to design as a different pipeline as this service will probablity reach EOL by the time the scoring is well established.
+
+The IO operations with respective to store extracted text page and reterival of page wise text will be hanlded by `PageIODao` which will implmented by `FireStorePageIODao`. This provides a standard contract between sources, sink and application. All the contracts will be decoupled to maintain seperate objects for flow.
+
+![Image for PageIODao](assets/img_8.png)
+
+Fig: PageIODao
+
+A similar design will be developed for pubsub IO operations as well
+
 
 ## Risk
-1. PDDocument may not be serializable in that we will need to club two steps, i.e. `PrepareDocument` and `CollectPageText` into one in the graph.
+1. PDDocument may not be serializable, in that case we will need to club two steps, i.e. `PrepareDocument` and `CollectPageText` into one in the graph.
+
 ## Deployment
 
 ## Resources

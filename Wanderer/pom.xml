@@ -4,9 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.worden</groupId>
+    <groupId>com.worden.wanderer</groupId>
     <artifactId>Wanderer</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>22</maven.compiler.source>
@@ -17,24 +18,33 @@
         <lombok.version>1.18.34</lombok.version>
     </properties>
 
+    <modules>
+        <module>core</module>
+    </modules>
+
 
     <dependencies>
+
+        <!-- Local modules -->
+        <dependency>
+            <groupId>com.worden.core</groupId>
+            <artifactId>core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <!-- Beam main sdks    -->
         <dependency>
             <groupId>org.apache.beam</groupId>
             <artifactId>beam-sdks-java-core</artifactId>
-            <version>${beam.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.beam</groupId>
             <artifactId>beam-runners-google-cloud-dataflow-java</artifactId>
-            <version>${beam.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.beam</groupId>
             <artifactId>beam-sdks-java-io-google-cloud-platform</artifactId>
-            <version>${beam.version}</version>
         </dependency>
 
         <dependency>
@@ -48,7 +58,6 @@
         <dependency>
             <groupId>org.apache.beam</groupId>
             <artifactId>beam-runners-direct-java</artifactId>
-            <version>${beam.version}</version>
         </dependency>
 
 

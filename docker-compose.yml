@@ -1,0 +1,11 @@
+services:
+  wanderer-devbox:
+    build: 
+      dockerfile: ./.devcontainer/wanderer/DockerFile
+    container_name: Wanderer-devbox
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./Wanderer:/workspace/wanderer
+      - ./Readme.md:/workspace/Readme.md
+    
