@@ -3,7 +3,7 @@
 using the beam sdk java and dataflow libs as provided in the SRS resources.
 ## Design
 
-The application will be broken down into two modules, one will be `main` project that holds the pipeline code and other would be the `core` module that holds the business logic. The core module as of now is not planned for expansion as there is no re-usablity cases at this instant. The project will make use of the core module to run buiness logic functions. This ensures that pipeline design can be handled independently and business logic changes can be off loaded in the future if and when the pods is planned for scaling.
+The application will be broken down into two modules, one will be `main` project that holds the pipeline code and other would be the `core` module that holds the business logic. The core module as of now is not planned for expansion as there is no re-usablity cases at this instant. The project will make use of the core module to run buiness logic functions. This ensures that pipeline design can be handled independently and business logic changes can be off loaded in the future if and when the pods is planned for scaling. A `commons` is introduced if and when there is common object for both the pipeline and two seperate module namely `reader` and `processor` each holding respective pipeline code.  
 
 The pipelines `Reader` and `Processor` together essentially hold the ability to convert a given book in url from to extract text and score each page. The application code will be developed to ensure that the packaging is cohesive and robust for implementation. Keeping this as the main functionality the following functions are identified and will be added to the `core` module
 
