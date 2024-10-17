@@ -2,13 +2,13 @@
 # Repo structure 
 This is mono repo that holds different project, the following will help in quickly grasping where is what
 
-- Aurora: A monorepo for all frontend projects.
-- Bouncer: A python project for user management 
+- Aurora: A monorepo for all frontend projects built on react js and turbo.
+- Bouncer: A python project for user management built on django
 - Foundation:  Pulumi code that holds the infrastructure in place.
-- Foreman: A rust project that reads each user api usage and provide financial charges for each customer
-- Wanderer: A java project that holds the code for the apache-beam pipeline processing
+- Foreman: A rust project that reads each user api usage and provide financial charges for each customer built on Axum/Actix. (not sure yet)
+- Wanderer: A java project that holds the code for the apache-beam pipeline processing 
 - Script:  A generalized scripts that used for the purpose of the project. Each script has its own use case
-- Librarian: a service for book management
+- Librarian: A Java service for book management built on spring boot
 
 
 # Repo Description
@@ -37,8 +37,8 @@ Please read the docs in the following order to better understand the flow
 
 
 # Note 
-There are some un-necessary steps i have taken to ensure i learn some additional feature of technologies. In a real world
-I would reverse this decisions to ensure there is optimal design.
+There are some un-necessary steps i have taken to ensure i learn some additional feature/technologies. In a real world
+I would change these decisions to ensure there is optimal design.
 
 Here is the list
 1. There is no specific need for `Processor` to be batch processing , making this streaming would make the feature more realtime

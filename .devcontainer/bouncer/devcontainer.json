@@ -1,10 +1,10 @@
 {
-  "name": "Foundation-devbox",
+  "name": "Bouncer-devbox",
   "dockerComposeFile": [
     "../../docker-compose.yml"
   ],
-  "service": "foundation-devbox",
-  "workspaceFolder": "/workspace/foundation",
+  "service": "bouncer-devbox",
+  "workspaceFolder": "/workspace/bouncer",
   "customizations": {
     "vscode": {}
   }

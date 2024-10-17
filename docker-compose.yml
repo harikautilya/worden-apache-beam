@@ -17,4 +17,14 @@ services:
     volumes:
       - ./foundation:/workspace/foundation
       - ./Readme.md:/workspace/Readme.md
+
+  bouncer-devbox:
+    build: 
+      dockerfile: ./.devcontainer/bouncer/DockerFile
+    container_name: Bouncer-devbox
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./bouncer:/workspace/bouncer
+      - ./Readme.md:/workspace/Readme.md
     

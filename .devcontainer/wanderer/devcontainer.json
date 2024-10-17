@@ -1,5 +1,5 @@
 {
-  "name": "Wanderer",
+  "name": "Wanderer-devbox",
   "dockerComposeFile": [
     "../../docker-compose.yml"
   ],
