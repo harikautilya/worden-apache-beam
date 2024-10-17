@@ -1,0 +1,10 @@
+name: foundation
+description: IAC for google project
+runtime:
+  name: python
+  options:
+    toolchain: pip
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: gcp-python

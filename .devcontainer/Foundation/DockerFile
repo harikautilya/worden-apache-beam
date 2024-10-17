@@ -1,6 +1,6 @@
 FROM python:alpine3.19
 
-RUN apk add curl
+RUN apk add curl pipx
 
 # Add pulumi
 RUN curl -fsSL https://get.pulumi.com | sh
@@ -12,6 +12,9 @@ RUN tar -xf google-cloud-cli-linux-x86_64.tar.gz
 RUN rm  google-cloud-cli-linux-x86_64.tar.gz 
 RUN ./google-cloud-sdk/install.sh -q
 ENV PATH=/google-cloud-sdk/bin:$PATH
+
+# Add poetry
+RUN pipx install poetry==1.8.4
 
 WORKDIR  /workspace/foundation
 
