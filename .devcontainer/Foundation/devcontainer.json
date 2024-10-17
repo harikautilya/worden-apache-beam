@@ -1,0 +1,11 @@
+{
+  "name": "Foundation",
+  "dockerComposeFile": [
+    "../../docker-compose.yml"
+  ],
+  "service": "foundation-devbox",
+  "workspaceFolder": "/workspace/foundation",
+  "customizations": {
+    "vscode": {}
+  }
+}

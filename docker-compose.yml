@@ -8,4 +8,13 @@ services:
     volumes:
       - ./Wanderer:/workspace/wanderer
       - ./Readme.md:/workspace/Readme.md
+  foundation-devbox:
+    build: 
+      dockerfile: ./.devcontainer/foundation/DockerFile
+    container_name: Foundation-devbox
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./foundation:/workspace/foundation
+      - ./Readme.md:/workspace/Readme.md
     

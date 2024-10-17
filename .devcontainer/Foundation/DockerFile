@@ -1,0 +1,18 @@
+FROM python:alpine3.19
+
+RUN apk add curl
+
+# Add pulumi
+RUN curl -fsSL https://get.pulumi.com | sh
+ENV PATH=/root/.pulumi/bin:$PATH
+
+# Add gcloud for infra support
+RUN curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz  
+RUN tar -xf google-cloud-cli-linux-x86_64.tar.gz 
+RUN rm  google-cloud-cli-linux-x86_64.tar.gz 
+RUN ./google-cloud-sdk/install.sh -q
+ENV PATH=/google-cloud-sdk/bin:$PATH
+
+WORKDIR  /workspace/foundation
+
+CMD ["sh"]
