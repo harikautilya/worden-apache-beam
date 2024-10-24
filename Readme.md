@@ -20,11 +20,8 @@ understand how company's revenue an d expectations are converted to technical so
 
 This project is simplified to just PRD and SRS to facilitate my need of learning. If any mistakes are found, please correct it by opening a PR . 
 
-This project is developed to understand how to interact with the api and how to interface each application around the concepts 
-of the apache beam technologies, spring boot. The project also focus on documentation of such use-cases as to how SRS, 
-HLD and LLD designs are prepared to solve the use case. 
-To facilitate this and having AI being the great interest in the recent time, Worden, a data company is imagined
-and the following problem is described. 
+This project is developed to understand how to interact with the api and how to interface each application around the concepts of the apache beam technologies, spring boot. The project also focus on documentation of such use-cases as to how SRS, HLD and LLD designs are prepared to solve the use case. 
+To facilitate this and having AI being the great interest in the recent time, Worden, a data company is imaginedand the following problem is described. 
 
 `Imagined` being the keyword across all assumptions
 
