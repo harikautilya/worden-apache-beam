@@ -1,0 +1,16 @@
+{
+  "name": "@aurora/website",
+  "version": "1.0.0",
+  "description": "This is the main webpage for the aurora project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "WATCHPACK_POLLING=true next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@aurora/text": "*"
+  }
+}

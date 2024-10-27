@@ -1,0 +1,21 @@
+{
+  "name": "Aurora-devbox",
+  "dockerComposeFile": [
+    "../../docker-compose.yml"
+  ],
+  "service": "aurora-devbox",
+  "workspaceFolder": "/workspace/aurora",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "biomejs.biome"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "[javascript]": {
+          "editor.defaultFormatter": "biomejs.biome"
+        }
+      }
+    }
+  }
+}

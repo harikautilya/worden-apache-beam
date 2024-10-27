@@ -28,3 +28,16 @@ services:
       - ./bouncer:/workspace/bouncer
       - ./Readme.md:/workspace/Readme.md
     
+  aurora-devbox:
+    build:
+      dockerfile: ./.devcontainer/aurora/DockerFile
+    container_name: aurora-devbox
+    stdin_open: true
+    tty: true
+    ports:
+     - 3000:3000
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true 
+    volumes:
+      - ./aurora:/workspace/aurora

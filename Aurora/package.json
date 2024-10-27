@@ -1,0 +1,27 @@
+{
+  "packageManager": "npm@10.1.0",
+  "name": "@aurora/main",
+  "version": "1.0.0",
+  "description": "This is the mono for the worden projecct",
+  "workspaces": [
+    "./apps/*",
+    "./libs/*"
+  ],
+  "scripts": {
+    "dev:website": "turbo run dev --filter=@aurora/website",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kautilya",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@aurora/text": "^1.0.0",
+    "next": "15.0.1",
+    "react": "19.0.0-rc-69d4b800-20241021",
+    "react-dom": "19.0.0-rc-69d4b800-20241021"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "turbo": "^2.2.3"
+  },
+  "overrides": {}
+}
