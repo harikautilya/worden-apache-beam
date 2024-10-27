@@ -12,8 +12,7 @@
         "java.jdt.ls.java.home": "/opt/java/openjdk"
       },
       "extensions": [
-        "vscjava.vscode-java-pack",
-        "Oracle.oracle-java"
+        "vscjava.vscode-java-pack"
       ]
     }
   }

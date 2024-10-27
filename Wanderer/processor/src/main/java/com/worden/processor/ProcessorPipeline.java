@@ -9,9 +9,9 @@ public class ProcessorPipeline {
         ProcessorOptions options = PipelineOptionsFactory.fromArgs(args)
                 .withValidation()
                 .as(ProcessorOptions.class);
-
+                
         Pipeline pipeline = Pipeline.create(options);
-
+        
         pipeline.run().waitUntilFinish();
     }
 }
