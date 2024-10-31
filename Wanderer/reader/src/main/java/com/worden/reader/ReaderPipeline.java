@@ -2,10 +2,14 @@ package com.worden.reader;
 
 import org.apache.beam.sdk.Pipeline;
 import org.apache.beam.sdk.options.PipelineOptionsFactory;
+import org.apache.beam.sdk.transforms.Create;
+import org.apache.beam.sdk.transforms.DoFn;
+import org.apache.beam.sdk.transforms.ParDo;
 
-import com.worden.common.BookIO;
-import com.worden.core.book.BookService;
 
+/**
+ * Pipeline class for the DAG.
+ */
 public class ReaderPipeline {
 
     public static void main(String[] args) {
@@ -18,14 +22,20 @@ public class ReaderPipeline {
                 .withValidation()
                 .as(ReaderOptions.class);
 
-        // Service classes
-        BookService service = options.getBookService();
-
         // Create pipeline 
         Pipeline pipeline = Pipeline.create(options);
 
-        // Prepare pipeline
-        pipeline.apply(BookIO.collectBook(service));
+        // Test pipeline
+        pipeline.apply("Create value", Create.of("Sample", "Sample2"))
+        .apply("Test",  ParDo.of(new DoFn<String,String>() {
+            
+            @ProcessElement
+            public void processElement(ProcessContext context){
+               System.out.println(context.element());
+               context.output(context.element());
+            }
+
+        }));
 
         // Run Pipeline
         pipeline.run().waitUntilFinish();

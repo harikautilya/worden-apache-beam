@@ -24,7 +24,7 @@ The following are expansion of PCollection names mentioned in the diagram
 
 
 ### Book 
-A `BookService` class will be introduced that holds the funalities of reading book information from source and storing book information to sink. `BookDao` will be injected into `BookService` which collect books message from pub sub via `fetchBooks`.The dao interface ensure that the implemented is abstracted and the service is not directly dependent on the underlying implementation.
+A `BookService` class will be introduced that holds the functionalities of reading book information from source and storing book information to sink. `BookDao` will be injected into `BookService` which collect books message from pub sub via `fetchBooks`.The dao interface ensure that the implementation is abstracted and the service is not directly dependent on the underlying implementation.
 
 A `PubSubBookDao` will be developed that implements `BookDao`, providing the functionality on how to read pubsub message
 and convert to required message.
