@@ -1,0 +1,19 @@
+{
+  "name": "Librarian-devbox",
+  "dockerComposeFile": [
+    "../../docker-compose.yml"
+  ],
+  "service": "librarian-devbox",
+  "workspaceFolder": "/workspace/librarian",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "java.home": "/opt/java/openjdk",
+        "java.jdt.ls.java.home": "/opt/java/openjdk"
+      },
+      "extensions": [
+        "vscjava.vscode-java-pack"
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+FROM maven:3.9-eclipse-temurin-22-alpine
+
+# Install necessary packages for beam 
+RUN apk add libc6-compat snappy
+
+
+WORKDIR  /workspace/wanderer
+
+CMD ["bash"]

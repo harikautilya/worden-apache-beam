@@ -1,13 +1,19 @@
 services:
-  wanderer-devbox:
-    build: 
-      dockerfile: ./.devcontainer/wanderer/DockerFile
-    container_name: Wanderer-devbox
+  aurora-devbox:
+    build:
+      dockerfile: ./.devcontainer/aurora/DockerFile
+    container_name: aurora-devbox
     stdin_open: true
     tty: true
+    ports:
+     - 3000:3000
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true 
     volumes:
-      - ./Wanderer:/workspace/wanderer
-      - ./Readme.md:/workspace/Readme.md
+      - ./aurora:/workspace/aurora
+
+
   foundation-devbox:
     build: 
       dockerfile: ./.devcontainer/foundation/DockerFile
@@ -27,17 +33,24 @@ services:
     volumes:
       - ./bouncer:/workspace/bouncer
       - ./Readme.md:/workspace/Readme.md
-    
-  aurora-devbox:
-    build:
-      dockerfile: ./.devcontainer/aurora/DockerFile
-    container_name: aurora-devbox
+
+  wanderer-devbox:
+    build: 
+      dockerfile: ./.devcontainer/wanderer/DockerFile
+    container_name: Wanderer-devbox
     stdin_open: true
     tty: true
-    ports:
-     - 3000:3000
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-      - WATCHPACK_POLLING=true 
     volumes:
-      - ./aurora:/workspace/aurora
+      - ./Wanderer:/workspace/wanderer
+      - ./Readme.md:/workspace/Readme.md
+
+  librarian-devbox:
+    build: 
+      dockerfile: ./.devcontainer/librarian/DockerFile
+    container_name: Librarian-devbox
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./Librarian:/workspace/librarian
+      - ./Readme.md:/workspace/Readme.md
+    
