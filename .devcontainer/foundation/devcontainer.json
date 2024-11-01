@@ -6,6 +6,26 @@
   "service": "foundation-devbox",
   "workspaceFolder": "/workspace/foundation",
   "customizations": {
-    "vscode": {}
+    "vscode": {
+      "extensions": [
+        "pulumi.pulumi-vscode-tools",
+        "pulumi.pulumi-lsp-client",
+        "ms-python.python",
+        "ms-python.black-formatter"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter",
+          "diffEditor.ignoreTrimWhitespace": false,
+          "editor.wordBasedSuggestions": "off",
+          "python.formatting.provider": "black",
+          "python.linting.pylintEnabled": true,
+          "python.defaultInterpreterPath": "/usr/local/bin/python",
+          "python.formatting.blackPath": "/usr/local/bin/black",
+          "python.linting.enabled": true
+        }
+      }
+    }
   }
 }

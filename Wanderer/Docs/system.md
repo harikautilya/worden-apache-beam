@@ -178,7 +178,13 @@ Steps:
 3. All the `PWords` is accumulated and forwarded to publish
 4. The publishing step will publish it to pub-sub
 
+## Functional requriements
+Speak about feature parity and differenet aspect of the application
+TBW
 
+## Non-Functional requirments
+Costing and team TBD
+TBW
 
 ## Release
 - Standard release practice of the organization

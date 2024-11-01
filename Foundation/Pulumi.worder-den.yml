@@ -1,0 +1,3 @@
+main: environment/dev/main.py
+config:
+  gcp:project: worden-440413
