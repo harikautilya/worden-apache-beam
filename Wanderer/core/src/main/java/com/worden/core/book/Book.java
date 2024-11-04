@@ -6,5 +6,6 @@ import lombok.Value;
 @Value
 @Builder(setterPrefix = "of")
 public class Book {
-  
+  private String bookUrl;
+  private long bookId;  
 };
